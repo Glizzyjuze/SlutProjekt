@@ -6,7 +6,6 @@ public class Enemy
     public Player player;
 
     public Rectangle enemyRec;
-    public Vector2 enemyPos;
     public Vector2 enemyVel;
 
     public Enemy()
@@ -16,8 +15,7 @@ public class Enemy
 
     public void CreateEnemy()
     {
-        enemyPos = new Vector2(400, 400);
-        enemyRec = new Rectangle(enemyPos.X, enemyPos.Y, 70, 70);
+        enemyRec = new Rectangle(400, 400, 70, 70);
     }
 
     public void Draw()

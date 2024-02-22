@@ -4,7 +4,6 @@ using Raylib_cs;
 public class Player
 {
     public Rectangle playerRec;
-    public Vector2 playerPos;
     
     public float moveSpeed = 10f;
 
@@ -15,8 +14,7 @@ public class Player
 
     public void CreatePlayer()
     {
-        playerPos = new Vector2(Raylib.GetScreenWidth() / 2 - 35, Raylib.GetScreenHeight() / 2 - 35);
-        playerRec = new Rectangle(playerPos.X, playerPos.Y, 70, 70);
+        playerRec = new Rectangle(Raylib.GetScreenWidth() / 2 - 35, Raylib.GetScreenHeight() / 2 - 35, 70, 70);
     }
 
     public void Draw()
@@ -26,27 +24,24 @@ public class Player
 
     public void Update()
     {
-        playerRec.X = playerPos.X;
-        playerRec.Y = playerPos.Y;
-
         if (Raylib.IsKeyDown(KeyboardKey.W))
         {
-            playerPos.Y -= moveSpeed;
+            playerRec.Y -= moveSpeed;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.S))
         {
-            playerPos.Y += moveSpeed;
+            playerRec.Y += moveSpeed;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.A))
         {
-            playerPos.X -= moveSpeed;
+            playerRec.X -= moveSpeed;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.D))
         {
-            playerPos.X += moveSpeed;
+            playerRec.X += moveSpeed;
         }
     }
 }

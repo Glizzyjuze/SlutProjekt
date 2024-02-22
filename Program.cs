@@ -17,7 +17,7 @@ while (!Raylib.WindowShouldClose())
 {
     Raylib.ClearBackground(Color.Beige);
 
-    camera.Target = new Vector2(player.playerPos.X, player.playerPos.Y);
+    camera.Target = new Vector2(player.playerRec.X, player.playerRec.Y);
 
     Raylib.BeginMode2D(camera);
 
