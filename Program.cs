@@ -17,12 +17,10 @@ while (!Raylib.WindowShouldClose())
 {
     Raylib.ClearBackground(Color.Beige);
 
-    camera.Target = new Vector2(player.playerRec.X, player.playerRec.Y);
+    //camera.Target = new Vector2();
 
-    Raylib.BeginMode2D(camera);
+    //Raylib.BeginMode2D(camera);
 
-    player.Draw();
-    player.Update();
     enemy.Draw();
     enemy.Update();
 
