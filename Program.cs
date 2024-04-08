@@ -21,8 +21,7 @@ while (!Raylib.WindowShouldClose())
 
     //Raylib.BeginMode2D(camera);
 
-    enemy.Draw();
-    enemy.Update();
+    
 
     Raylib.EndMode2D();
 
