@@ -4,9 +4,16 @@ namespace SlutProjekt;
 
 public class GameObject
 {
-    public int hp;
+    protected float speed;
+    protected int HP;
 
-    public float moveSpeed;
+    public void Draw()
+    {
 
-    public Rectangle characterRec;
+    }
+
+    public void Update()
+    {
+
+    }
 }
