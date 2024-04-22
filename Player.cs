@@ -2,11 +2,37 @@
 using Raylib_cs;
 using SlutProjekt;
 
+
 public class Player : GameObject
 {
-    public Player()
+    public override void Draw()
     {
-        speed = 10f;
-        HP = 3;
+        base.Draw();
+    }
+
+    public void Update()
+    {
+        rect.X = pos.X;
+        rect.Y = pos.Y;
+
+        if (Raylib.IsKeyDown(KeyboardKey.W))
+        {
+            pos.Y -= speed;
+        }
+
+        if (Raylib.IsKeyDown(KeyboardKey.S))
+        {
+            pos.Y += speed;
+        }
+
+        if (Raylib.IsKeyDown(KeyboardKey.A))
+        {
+            pos.X -= speed;
+        }
+
+        if (Raylib.IsKeyDown(KeyboardKey.D))
+        {
+            pos.X += speed;
+        }
     }
 }

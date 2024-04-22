@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hugo.zingmark\\Desktop\\Programmering\\SlutProjekt\\SlutProjekt.csproj": {}
+    "c:\\Users\\hugo.zingmark\\Desktop\\Programmering\\SlutProjekt\\SlutProjekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hugo.zingmark\\Desktop\\Programmering\\SlutProjekt\\SlutProjekt.csproj": {
+    "c:\\Users\\hugo.zingmark\\Desktop\\Programmering\\SlutProjekt\\SlutProjekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hugo.zingmark\\Desktop\\Programmering\\SlutProjekt\\SlutProjekt.csproj",
+        "projectUniqueName": "c:\\Users\\hugo.zingmark\\Desktop\\Programmering\\SlutProjekt\\SlutProjekt.csproj",
         "projectName": "SlutProjekt",
-        "projectPath": "C:\\Users\\hugo.zingmark\\Desktop\\Programmering\\SlutProjekt\\SlutProjekt.csproj",
+        "projectPath": "c:\\Users\\hugo.zingmark\\Desktop\\Programmering\\SlutProjekt\\SlutProjekt.csproj",
         "packagesPath": "C:\\Users\\hugo.zingmark\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hugo.zingmark\\Desktop\\Programmering\\SlutProjekt\\obj\\",
+        "outputPath": "c:\\Users\\hugo.zingmark\\Desktop\\Programmering\\SlutProjekt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

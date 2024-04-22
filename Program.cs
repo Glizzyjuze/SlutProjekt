@@ -8,10 +8,10 @@ Raylib.ToggleFullscreen();
 Player player = new();
 Enemy enemy = new();
 
-Camera2D camera;
-camera.Offset = new Vector2(Raylib.GetScreenWidth() / 2 - 35, Raylib.GetScreenHeight() / 2 - 35);
-camera.Rotation = 0f;
-camera.Zoom = 1f;
+//Camera2D camera;
+//camera.Offset = new Vector2(Raylib.GetScreenWidth() / 2 - 35, Raylib.GetScreenHeight() / 2 - 35);
+//camera.Rotation = 0f;
+//camera.Zoom = 1f;
 
 while (!Raylib.WindowShouldClose())
 {
@@ -21,9 +21,12 @@ while (!Raylib.WindowShouldClose())
 
     //Raylib.BeginMode2D(camera);
 
-    
+    player.Draw();
+    player.Update();
 
-    Raylib.EndMode2D();
+    enemy.Draw();
+
+    //Raylib.EndMode2D();
 
     Raylib.EndDrawing();
 }
