@@ -1,6 +1,5 @@
 ﻿using System.Numerics;
 using Raylib_cs;
-using SlutProjekt;
 
 namespace SlutProjekt;
 
@@ -12,10 +11,9 @@ public class GameObject
     }
 
     protected float speed = 7.5f;
-    protected int hp = 3;
    
     protected static Vector2 size = new Vector2(70, 70);
-    protected Vector2 pos = new Vector2(Raylib.GetScreenWidth() / 2 - size.X / 2, Raylib.GetScreenHeight() / 2 - size.Y / 2);
+    public Vector2 pos = new Vector2(Raylib.GetScreenWidth() / 2 - size.X / 2, Raylib.GetScreenHeight() / 2 - size.Y / 2);
     protected Vector2 vel;
 
     protected Color color = Color.DarkGreen;

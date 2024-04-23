@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using System.Runtime.CompilerServices;
 using Raylib_cs;
 using SlutProjekt;
 
@@ -6,10 +7,10 @@ public class Enemy : GameObject
 {
     public Enemy()
     {
-        speed = 5f;
-        hp = 10;
+        speed = 3f;
 
-        pos = new Vector2(1400, 700);
+        size = new Vector2(150, 150);
+        pos = new Vector2(1400, 540 - size.Y / 2);
 
         color = Color.Red;
         rect = new Rectangle(pos, size);
@@ -20,26 +21,45 @@ public class Enemy : GameObject
         base.Draw();
     }
 
-    Vector2 enemyMovement = new();
-    Vector2 destination = new();
+    int moveDownTime = 90;
+    int moveTime = 60;
 
-    int newPosX = Random.Shared.Next(-250, 250);
-    int newPosY = Random.Shared.Next(-250, 250);
+    Vector2 direction;
+    Vector2 movement;
 
-    int newPosDownTime = 90;
+    int newPosX = Random.Shared.Next(1920);
+    int newPosY = Random.Shared.Next(1080);
 
     public void Update()
     {
-        newPosDownTime -= 1;
-
-        Vector2 diff = destination - pos;
-        Vector2 Direction = Vector2.Normalize(diff);
-
-        enemyMovement = Direction * speed;
-
-        if (newPosDownTime == 0)
+        if (moveDownTime > 0)
         {
-            destination = new Vector2(newPosX, newPosY);
+            moveDownTime -= 1;
+        }
+
+        rect.X = pos.X;
+        rect.Y = pos.Y;
+
+        Vector2 destination = new Vector2(newPosX, newPosY);
+        Vector2 diff = destination - pos;
+        direction = Vector2.Normalize(diff);
+        movement = direction * speed;   
+        
+        if (moveDownTime == 0 && moveTime > 0)
+        {
+            pos.X += movement.X;
+            pos.Y += movement.Y;
+
+            moveTime -= 1;
+
+            if (moveTime == 0)
+            {
+                moveDownTime = 90;
+                moveTime = 60;
+
+                newPosX = Random.Shared.Next(1920);
+                newPosY = Random.Shared.Next(1080);
+            }
         }
     }
 }
