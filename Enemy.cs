@@ -1,10 +1,11 @@
 ﻿using System.Numerics;
-using System.Runtime.CompilerServices;
 using Raylib_cs;
 using SlutProjekt;
 
 public class Enemy : GameObject
 {
+    public Projectiles projectiles;
+
     public Enemy()
     {
         speed = 3f;
