@@ -12,12 +12,11 @@ public class GameObject
 
     protected float speed = 7.5f;
    
-    protected static Vector2 size = new Vector2(70, 70);
+    public static Vector2 size = new Vector2(70, 70);
     public Vector2 pos = new Vector2(Raylib.GetScreenWidth() / 2 - size.X / 2, Raylib.GetScreenHeight() / 2 - size.Y / 2);
-    protected Vector2 vel;
 
     protected Color color = Color.DarkGreen;
-    protected Rectangle rect;
+    public Rectangle rect;
 
     public virtual void Draw()
     {

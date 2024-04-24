@@ -3,9 +3,6 @@ using SlutProjekt;
 
 public class Player : GameObject
 {
-    
-    int hp = 3;
-
     public override void Draw()
     {
         base.Draw();

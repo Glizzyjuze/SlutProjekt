@@ -4,11 +4,9 @@ using SlutProjekt;
 
 public class Enemy : GameObject
 {
-    public Projectiles projectiles;
-
     public Enemy()
     {
-        speed = 3f;
+        speed = 20f;
 
         size = new Vector2(150, 150);
         pos = new Vector2(1400, 540 - size.Y / 2);
@@ -22,8 +20,8 @@ public class Enemy : GameObject
         base.Draw();
     }
 
-    int moveDownTime = 90;
-    int moveTime = 60;
+    int moveDownTime = 10;
+    int moveTime = 30;
 
     Vector2 direction;
     Vector2 movement;
@@ -55,8 +53,8 @@ public class Enemy : GameObject
 
             if (moveTime == 0)
             {
-                moveDownTime = 90;
-                moveTime = 60;
+                moveDownTime = 10;
+                moveTime = 30;
 
                 newPosX = Random.Shared.Next(1920);
                 newPosY = Random.Shared.Next(1080);
