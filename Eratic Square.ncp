@@ -1,0 +1,72 @@
+<Project>
+  <Name>Eratic Square</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>Eratic Square</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Program</Name>
+        <Access>Public</Access>
+        <Location left="122" top="40" />
+        <Size width="163" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Player player</Member>
+        <Member type="Field">Enemy enemy</Member>
+        <Member type="Field">string currentScene</Member>
+        <Member type="Field">int time</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GameObject</Name>
+        <Access>Public</Access>
+        <Location left="354" top="40" />
+        <Size width="163" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected float speed</Member>
+        <Member type="Field">public static Vector2 size</Member>
+        <Member type="Field">public Vector2 pos</Member>
+        <Member type="Field">protected Color color</Member>
+        <Member type="Field">public Rectangle rect</Member>
+        <Member type="Method">public virtual void Draw()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Player</Name>
+        <Access>Public</Access>
+        <Location left="215" top="300" />
+        <Size width="163" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public override void Draw()</Member>
+        <Member type="Method">public void Update()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Enemy</Name>
+        <Access>Public</Access>
+        <Location left="499" top="300" />
+        <Size width="163" height="213" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int moveDownTime</Member>
+        <Member type="Field">int moveTime</Member>
+        <Member type="Field">Vector2 direction</Member>
+        <Member type="Field">Vector2 movement</Member>
+        <Member type="Field">int newPosX</Member>
+        <Member type="Field">int newPosY</Member>
+        <Member type="Method">public override void Draw()</Member>
+        <Member type="Method">public void Update()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Generalization" first="2" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
