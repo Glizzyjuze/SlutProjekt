@@ -5,6 +5,7 @@ namespace SlutProjekt;
 
 public class GameObject
 {
+    //Både spelarrektangeln och fienderektangeln
     public GameObject()
     {
         rect = new Rectangle(pos, size);
@@ -17,7 +18,8 @@ public class GameObject
 
     protected Color color = Color.DarkGreen;
     public Rectangle rect;
-
+    
+    //Rita ut rektangeln för både Player och Enemy
     public virtual void Draw()
     {
         Raylib.DrawRectangleRec(rect, color);

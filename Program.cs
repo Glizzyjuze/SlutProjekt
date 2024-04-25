@@ -1,20 +1,21 @@
 ﻿using System.Numerics;
 using Raylib_cs;
-using SlutProjekt;
 
+//Spelfönstret storlek och bildfrekvens
 Raylib.InitWindow(1920, 1080, "Eratic Square");
 Raylib.SetTargetFPS(60);
 Raylib.ToggleFullscreen();
 
+//Åtkomst till Player- och Enemy-klassernas funktioner och variablar
 Player player = new();
 Enemy enemy = new();
-GameObject gameObject = new();
 
 string currentScene = "menu";
 int time = 0;
 
 while (!Raylib.WindowShouldClose())
 {
+    //Menyskärmen
     if (currentScene == "menu")
     {
         Raylib.ClearBackground(Color.Black);
@@ -30,6 +31,7 @@ while (!Raylib.WindowShouldClose())
         Raylib.EndDrawing();
     }
 
+    //Själva spelet
     if (currentScene == "game")
     {
         time++; 
@@ -42,7 +44,7 @@ while (!Raylib.WindowShouldClose())
         enemy.Draw();
         enemy.Update();
 
-        if (Raylib.CheckCollisionRecs(player.rect, enemy.rect))
+        if (Raylib.CheckCollisionRecs(player.rect, enemy.rect)) 
         {
             currentScene = "lose";
         }
@@ -50,6 +52,7 @@ while (!Raylib.WindowShouldClose())
         Raylib.EndDrawing();
     }
     
+    //Förlustskärmen
     if (currentScene == "lose")
     {
         Raylib.ClearBackground(Color.Black);

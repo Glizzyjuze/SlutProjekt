@@ -4,6 +4,7 @@ using SlutProjekt;
 
 public class Enemy : GameObject
 {
+    //Kod från GameObject som ändras för att bättre passa fienderektangeln
     public Enemy()
     {
         speed = 20f;
@@ -15,20 +16,24 @@ public class Enemy : GameObject
         rect = new Rectangle(pos, size);
     }
 
+    //Ritkoden från GameObject
     public override void Draw()
     {
         base.Draw();
     }
 
+    //Hur länge rektangeln rör på sig och hur lång paus den tar efter den rört på sig
     int moveDownTime = 10;
     int moveTime = 30;
 
     Vector2 direction;
     Vector2 movement;
 
+    //Slumpmässigt värde på fienderektangelns nästa destinationkordinater
     int newPosX = Random.Shared.Next(1920);
     int newPosY = Random.Shared.Next(1080);
 
+    //Rörelsekod för fienderektangeln
     public void Update()
     {
         if (moveDownTime > 0)

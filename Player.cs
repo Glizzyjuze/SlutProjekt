@@ -3,11 +3,13 @@ using SlutProjekt;
 
 public class Player : GameObject
 {
+    //Ritkoden från GameObject-klassen
     public override void Draw()
     {
         base.Draw();
     }
 
+    //Rörelsekod
     public void Update()
     {
         rect.X = pos.X;
