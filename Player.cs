@@ -10,7 +10,7 @@ public class Player : GameObject
     }
 
     //Rörelsekod
-    public void Update()
+    public override void Update()
     {
         rect.X = pos.X;
         rect.Y = pos.Y;

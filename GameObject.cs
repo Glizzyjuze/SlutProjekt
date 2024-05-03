@@ -24,4 +24,5 @@ public class GameObject
     {
         Raylib.DrawRectangleRec(rect, color);
     }
+    public virtual void Update() {}
 }

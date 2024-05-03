@@ -34,7 +34,7 @@ public class Enemy : GameObject
     int newPosY = Random.Shared.Next(1080);
 
     //Rörelsekod för fienderektangeln
-    public void Update()
+    public override void Update()
     {
         if (moveDownTime > 0)
         {
